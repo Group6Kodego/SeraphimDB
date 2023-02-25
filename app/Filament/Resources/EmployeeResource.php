@@ -52,7 +52,6 @@ class EmployeeResource extends Resource
             TextInput::make('middle_name')->required()->maxLength(255),
             TextInput::make('last_name')->required()->maxLength(255),
             DatePicker::make('birth_date')->required(),
-            
             TextInput::make('gender')->required()->maxLength(255),
             TextInput::make('phone')->required()->maxLength(255),
             TextInput::make('nationality')->required()->maxLength(255),
@@ -68,12 +67,18 @@ class EmployeeResource extends Resource
             ->schema([
                         Grid::make(2)
                         ->schema([
-            TextInput::make('spouse/husband_fullname')->maxLength(255),
-            DatePicker::make('birthdate'),
+            Card::make()
+                ->schema([
+                Grid::make(2)
+                    ->schema([
+                        TextInput::make('spouse')->maxLength(255)->label('Spouse Full Name'),
+                        DatePicker::make('spouseBirthdate')->label('Birthdate'),
+                    ])
+                ]),
             Grid::make(3)
             ->schema([
-            TextInput::make('Children_1')->maxLength(255),
-            Select::make('gender')
+            TextInput::make('child_1')->maxLength(255),
+            Select::make('child_1gender')
                 ->options([
                     'Male' => 'Male',
                     'Female' => 'Female',
