@@ -27,7 +27,6 @@ class Employee extends Model
         'pagibig_id',
         'philhealth_id',
         'date_hired',
-        'sss_id'=>'password',
     ];
     /* public function country()
     {

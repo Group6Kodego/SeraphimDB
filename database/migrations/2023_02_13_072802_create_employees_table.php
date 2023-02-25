@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('sss_id');
             $table->string('philhealth_id');
             $table->string('pagibig_id');
-            $table->string('password');
+            
             $table->date('date_hired');
             $table->timestamps();
         });

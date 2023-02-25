@@ -11,6 +11,7 @@ use App\Models\Employee;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
@@ -52,7 +53,12 @@ class EmployeeResource extends Resource
             TextInput::make('middle_name')->required()->maxLength(255),
             TextInput::make('last_name')->required()->maxLength(255),
             DatePicker::make('birth_date')->required(),
-            TextInput::make('gender')->required()->maxLength(255),
+            Select::make('gender')
+                ->required()
+                ->options([
+                    'Male' => 'Male',
+                    'Female' => 'Female',
+                ]),
             TextInput::make('phone')->required()->maxLength(255),
             TextInput::make('nationality')->required()->maxLength(255),
             TextInput::make('address')->required()->maxLength(255),
@@ -75,48 +81,90 @@ class EmployeeResource extends Resource
                         DatePicker::make('spouseBirthdate')->label('Birthdate'),
                     ])
                 ]),
-            Grid::make(3)
+            
+                Card::make()
+                ->schema([
+                    Grid::make(3)
             ->schema([
-            TextInput::make('child_1')->maxLength(255),
+            TextInput::make('child_1')->maxLength(255)->label('Child 1 Name'),
             Select::make('child_1gender')
+            ->label('Gender')
                 ->options([
                     'Male' => 'Male',
                     'Female' => 'Female',
                 ]),
-            DatePicker::make('birthdate'),
-            TextInput::make('Children_2')->maxLength(255),
-            Select::make('gender')
-                ->options([
-                    'Male' => 'Male',
-                    'Female' => 'Female',
-                ]),
-            DatePicker::make('birthdate'),
-            TextInput::make('Children_3')->maxLength(255),
-            Select::make('gender')
-                ->options([
-                    'Male' => 'Male',
-                    'Female' => 'Female',
-                ]),
-            DatePicker::make('birthdate'),
-            TextInput::make('Children_4')->maxLength(255),
-            Select::make('gender')
-                ->options([
-                    'Male' => 'Male',
-                    'Female' => 'Female',
-                ]),
-            DatePicker::make('birthdate'),
-            TextInput::make('Children_5')->maxLength(255),
-            Select::make('gender')
-                ->options([
-                    'Male' => 'Male',
-                    'Female' => 'Female',
-                ]),
-            DatePicker::make('birthdate'),
+            DatePicker::make('child_1birthdate')
+                ->label('Birth Date'),
             ]),
-            TextInput::make('father`s_fullname')->maxLength(255),
-            DatePicker::make('birth_date'),
-            TextInput::make('mother`s_fullname')->maxLength(255),
-            DatePicker::make('birth_date'),
+            ]),
+            Card::make()
+                ->schema([
+                    Grid::make(3)
+            ->schema([
+                TextInput::make('child_2')->maxLength(255)->label('Child 2 Name'),
+                Select::make('child_2gender')
+                ->label('Gender')
+                    ->options([
+                        'Male' => 'Male',
+                        'Female' => 'Female',
+                    ]),
+                DatePicker::make('child_2birthdate')
+                    ->label('Birth Date'),
+            ]),
+            ]),
+            Card::make()
+            ->schema([
+                    Grid::make(3)
+                    ->schema([
+                        TextInput::make('child_3')->maxLength(255)->label('Child 3 Name'),
+                        Select::make('child_3gender')
+                        ->label('Gender')
+                            ->options([
+                                'Male' => 'Male',
+                                'Female' => 'Female',
+                            ]),
+                        DatePicker::make('child_3birthdate')
+                            ->label('Birth Date'),
+            ]),
+            ]),
+            Card::make()
+                ->schema([
+                    Grid::make(3)
+            ->schema([
+                TextInput::make('child_4')->maxLength(255)->label('Child 4 Name'),
+                Select::make('child_4gender')
+                ->label('Gender')
+                    ->options([
+                        'Male' => 'Male',
+                        'Female' => 'Female',
+                    ]),
+                DatePicker::make('child_4birthdate')
+                    ->label('Birth Date'),
+            ]),
+            ]),
+            Card::make()
+                ->schema([
+                    Grid::make(3)
+            ->schema([
+                TextInput::make('child_5')->maxLength(255)->label('Child 5 Name'),
+                Select::make('child_5gender')
+                ->label('Gender')
+                    ->options([
+                        'Male' => 'Male',
+                        'Female' => 'Female',
+                    ]),
+                DatePicker::make('child_5birthdate')
+                    ->label('Birth Date'),
+            ]),
+        ]),
+        Fieldset::make('Parents')
+    ->schema([
+        TextInput::make('fathers_name')->label('Father`s Full Name')->maxLength(255),
+            DatePicker::make('fathersBirthdate')->label('Birth Date'),
+            TextInput::make('mothers_name')->label('Mother`s Full Name')->maxLength(255),
+            DatePicker::make('mothersBirthdate')->label('Birth Date'),
+    ])
+            
                         ]) ]),
                     Tabs\Tab::make('Educational Background')
                         ->schema([
