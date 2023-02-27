@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->date('birth_date');
-            // $table->string('age');
             $table->string('gender');
             $table->string('phone');
             $table->string('nationality');
@@ -35,9 +34,53 @@ return new class extends Migration
             $table->string('sss_id');
             $table->string('philhealth_id');
             $table->string('pagibig_id');
-            
             $table->date('date_hired');
             $table->timestamps();
+
+            //Family Information
+            $table->string('spouse')->nullable();
+            $table->date('spouseBirthdate')->nullable();
+            $table->string('child_1')->nullable();
+            $table->string('child_1gender')->nullable();
+            $table->date('child_1birthdate')->nullable();
+            $table->string('child_2')->nullable();
+            $table->string('child_2gender')->nullable();
+            $table->date('child_2birthdate')->nullable();
+            $table->string('child_3')->nullable();
+            $table->string('child_3gender')->nullable();
+            $table->date('child_3birthdate')->nullable();
+            $table->string('child_4')->nullable();
+            $table->string('child_4gender')->nullable();
+            $table->date('child_4birthdate')->nullable();
+            $table->string('child_5')->nullable();
+            $table->string('child_5gender')->nullable();
+            $table->date('child_5birthdate')->nullable();
+            $table->string('fathers_name')->nullable();
+            $table->date('fathersBirthdate')->nullable();
+            $table->string('Mothers_name')->nullable();
+            $table->date('MothersBirthdate')->nullable();
+
+            //Educational background
+            $table->string('HighSchool_Name')->nullable();
+            $table->string('HighSchool_Address')->nullable();
+            $table->string('hsYear')->nullable();
+            $table->string('hs_Start')->nullable();
+            $table->string('hs_End')->nullable();
+            $table->string('hsAwards')->nullable();
+            $table->string('seniorHighSchool_Name')->nullable();
+            $table->string('seniorHighSchool_Address')->nullable();
+            $table->string('shsYear')->nullable();
+            $table->string('shs_Start')->nullable();
+            $table->string('shs_End')->nullable();
+            $table->string('shsAwards')->nullable();
+            $table->string('college_Name')->nullable();
+            $table->string('college_Address')->nullable();
+            $table->string('collegeYear')->nullable();
+            $table->string('college_Start')->nullable();
+            $table->string('college_End')->nullable();
+            $table->string('collegeAwards')->nullable();
+            
+            
         });
     }
 
