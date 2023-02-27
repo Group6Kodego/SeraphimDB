@@ -28,9 +28,6 @@ border: 1px solid rgba(226, 167, 6, 0.7)"
                     <li>
                         <a href="/services" class="block py-2 pr-4 pl-3 text-gray-200 border-b border-gray-100  hover:text-amber-50 lg:border-0 lg:hover:text-primary-700 lg:p-0">Services</a>
                     </li>
-                    <li>
-                        <a href="#" class="block py-2 pl-3 text-gray-200 border-b border-gray-100 hover:text-amber-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">News & Updates</a>
-                    </li>
                     
                 </ul>
             </div>

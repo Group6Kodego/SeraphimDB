@@ -50,7 +50,7 @@
           <div class="block rounded-lg shadow-lg bg-white">
             <div class="flex flex-wrap items-center">
               <div class="hidden lg:flex grow-0 shrink-0 basis-auto lg:w-6/12 xl:w-4/12">
-                <img src={{asset('/images/Ceo.jpg')}} alt="Trendy Pants and Shoes"
+                <img src={{asset('/images/Ceo.png')}} alt="Trendy Pants and Shoes"
                   class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" />
               </div>
               <div class="grow-0 shrink-0 basis-auto w-full lg:w-6/12 xl:w-8/12">
@@ -75,7 +75,7 @@
                     Sincerely,
                   </p>
                   <p class="text-gray-800 font-cinzel text-center font-bold text-lg">
-                    [Your Name]
+                    Michael Bolivar
                   </p>
                   <p class="text-gray-800 font-cinzel text-center font-bold text-lg">
                     CEO, Hotel Seraphim
@@ -88,10 +88,10 @@
         </section>
         <!-- Section: Design Block -->
         <!-- Container for demo purpose -->
-    <div class="container my-24 md:px-6 mx-auto">
+    {{--<div class="container my-24 md:px-6 mx-auto">
     
       <!-- Section: Design Block -->
-      {{-- <section class="mb-32 text-gray-800 text-center">
+       <section class="mb-32 text-gray-800 text-center">
         <x-header>Latest articles</x-header>
         <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
           @foreach($newsandupdates as $newsandupdate)
@@ -122,11 +122,11 @@
             </div>
           </div>
           @endforeach
-      </section> --}}
+      </section> 
       <!-- Section: Design Block -->
       
     
-    </div>
+    </div>--}}
     <!-- Container for demo purpose -->
     {{-- -------------------------Rooms Start--------------------------- --}}
     

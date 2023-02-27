@@ -108,12 +108,12 @@
           {{-- KINDERGARTEN SCHOOL --}}
           <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
             <div class="relative flex items-end overflow-hidden rounded-xl">
-              <img src="{{ asset('/images/account.jpg') }}" alt="Kindergarten">
+              <img src="{{ asset('/images/employee1.png') }}" alt="Kindergarten">
               <div class="flex items-center space-x-1.5 rounded-lg bg-amber-400 px-4 py-1.5 text-white duration-100 hover:bg-amber-500">
               </div>
             </div>
             <div class="mt-1 p-2">
-              <h2 class="text-slate-900">Employee Name</h2>
+              <h2 class="text-slate-900">Michael Bolivar</h2>
               <h4 class="text-slate-700">Accounting</h4>
               <p class="mt-1 text-sm text-slate-400">Hard work pays off, you did it! Congrats to my awesome teammate. JoB well done...</p>
     {{-- KINDERGARTEN MODAL BUTTON --}}
@@ -130,12 +130,12 @@
           {{-- ELEM SCHOOL --}}
           <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
               <div class="relative flex items-end overflow-hidden rounded-xl">
-                <img src="{{ asset('/images/manager.jpg') }}" alt="Elementary" />
+                <img src="{{ asset('/images/employee2.png') }}" alt="Elementary" />
                 <div class="flex items-center space-x-1.5 rounded-lg bg-amber-400 px-4 py-1.5 text-white duration-100 hover:bg-amber-500">
                 </div>
                </div>
                <div class="mt-1 p-2">
-                <h2 class="text-slate-900">Employee Name</h2>
+                <h2 class="text-slate-900">Richard Enriquez</h2>
               <h4 class="text-slate-700">Manager</h4>
                 <p class="mt-1 text-sm text-slate-400">Hard work pays off, you did it! Congrats to my awesome teammate. Job well done...</p>
       {{-- ELEM SCHOOL MODAL BUTTON --}}
@@ -153,12 +153,12 @@
                    {{-- JUNIOR HIGH SCHOOL --}}
                    <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
                     <div class="relative flex items-end overflow-hidden rounded-xl">
-                      <img src="{{ asset('/images/crew2.jpg') }}" alt="Junior" />
+                      <img src="{{ asset('/images/employee3.png') }}" alt="Junior" />
                       <div class="flex items-center space-x-1.5 rounded-lg bg-amber-400 px-4 py-1.5 text-white duration-100 hover:bg-amber-500">
                       </div>
                     </div>
                     <div class="mt-1 p-2">
-                      <h2 class="text-slate-900">Employee Name</h2>
+                      <h2 class="text-slate-900">Frederick Ibarrola</h2>
                       <h4 class="text-slate-700">House Keeping</h4>
                       <p class="mt-1 text-sm text-slate-400">Hard work pays off, you did it! Congrats to my awesome teammate. Job well done...</p>
             {{-- JUNIOR HIGH SCHOOL MODAL BUTTON --}}
@@ -176,12 +176,12 @@
                          {{-- SENIOR HIGH SCHOOL --}}
                          <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
                           <div class="relative flex items-end overflow-hidden rounded-xl">
-                            <img src="{{ asset('/images/gaurd.jpg') }}" alt="Senior" />
+                            <img src="{{ asset('/images/employee4.png') }}" alt="Senior" />
                             <div class="flex items-center space-x-1.5 rounded-lg bg-amber-400 px-4 py-1.5 text-white duration-100 hover:bg-amber-600">
                             </div>
                           </div>
                           <div class="mt-1 p-2">
-                            <h2 class="text-slate-700">Employee Name</h2>
+                            <h2 class="text-slate-700">Arjay Bermundo</h2>
                             <h4 class="text-slate-700">Security Guard</h4>
                             <p class="mt-1 text-sm text-slate-400">Hard work pays off, you did it! Congrats to my awesome teammate. Job well done...</p>
                   {{-- JUNIOR HIGH SCHOOL MODAL BUTTON --}}
