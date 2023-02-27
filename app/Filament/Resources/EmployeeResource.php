@@ -172,36 +172,36 @@ class EmployeeResource extends Resource
                                 ->schema([
                                     TextInput::make('HighSchool_Name')->maxLength(255),
                                     TextInput::make('HighSchool_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    Select::make('hsYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
+                                    TextInput::make('hs_Start')->maxLength(255),
+                                    TextInput::make('hs_End')->maxLength(255),
+                                    TextInput::make('hsAwards')->maxLength(255)->label('Awards/Honor'),
 
-                                    TextInput::make('SeniorHighSchool_Name')->maxLength(255),
-                                    TextInput::make('SeniorHighSchool_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    TextInput::make('seniorHighSchool_Name')->maxLength(255),
+                                    TextInput::make('seniorHighSchool_Address')->maxLength(255),
+                                    Select::make('shsYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
+                                    TextInput::make('shs_Start')->maxLength(255),
+                                    TextInput::make('shs_End')->maxLength(255),
+                                    TextInput::make('shsAwards')->maxLength(255)->label('Awards/Honor'),
 
                                     TextInput::make('CollegeUniversity_Name')->maxLength(255),
                                     TextInput::make('CollegeUniversity_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    Select::make('collegeYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
+                                    TextInput::make('college_Start')->maxLength(255),
+                                    TextInput::make('college_End')->maxLength(255),
+                                    TextInput::make('collegeAwards')->maxLength(255)->label('Awards/Honor'),
                                 ])
                         ]),
                 ]) 
