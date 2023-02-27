@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->date('birth_date');
-            // $table->string('age');
             $table->string('gender');
             $table->string('phone');
             $table->string('nationality');
@@ -35,7 +34,6 @@ return new class extends Migration
             $table->string('sss_id');
             $table->string('philhealth_id');
             $table->string('pagibig_id');
-            
             $table->date('date_hired');
             $table->timestamps();
 
@@ -82,8 +80,6 @@ return new class extends Migration
             $table->string('college_End')->nullable();
             $table->string('collegeAwards')->nullable();
             
-            
-
             
         });
     }

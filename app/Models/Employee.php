@@ -10,7 +10,7 @@ class Employee extends Model
     use HasFactory;
 
     protected $fillable = [
-        // 'image',
+        // 'attachment',
         'employee_id',
         'first_name',
         'middle_name',
@@ -27,6 +27,29 @@ class Employee extends Model
         'pagibig_id',
         'philhealth_id',
         'date_hired',
+        //Family Information
+            'spouse',
+            'spouseBirthdate',
+            'child_1',
+            'child_1gender',
+            'child_1birthdate',
+            'child_2',
+            'child_2gender',
+            'child_2birthdate',
+            'child_3',
+            'child_3gender',
+            'child_3birthdate',
+            'child_4',
+            'child_4gender',
+            'child_4birthdate',
+            'child_5',
+            'child_5gender',
+            'child_5birthdate',
+            'fathers_name',
+            'fathersBirthdate',
+            'Mothers_name',
+            'MothersBirthdate',
+        //Educational Background
         'HighSchool_Name',
         'HighSchool_Address',
         'hsYear',
