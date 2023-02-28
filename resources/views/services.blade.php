@@ -200,7 +200,7 @@
            </section>
            {{-- ----------------------------------------------------------------------------- --}}
            <div class="flex flex-wrap justify-between pt-12 -mx-6">
-           <div class="rounded overflow-hidden shadow-lg container mx-auto text-center break-normal" style="background: linear-gradient(50deg,#dbec40,#f7dd4a);">
+           <div class="rounded overflow-hidden shadow-lg container mx-auto text-center break-normal" style="background: linear-gradient(50deg,#dbec40,#ddc641);">
             <!--Title-->
               <p class="px-5 py-5 text-gray-800 font-bold text-3xl md:text-5xl">
                 Contact US
@@ -216,11 +216,11 @@
                   <div class="p-6">
                     <div  class="overflow-hidden h-15" style="background-color:  #ffde59;">
                     <h4  class="text-3xl text-gray-900 font-semibold mb-1">Front Desk</h4>
-                    <p class="text-lg text-gray-900">Lorem ipsum dolor sit amet.</p>
+                    <p class="text-lg text-gray-900">Please Contact Us for Inquiries</p>
                     </div>
                     <hr />
                     <p class="mt-4">
-                      <dl style="margin-left: 20%" class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                      <dl style="margin-left: 20%" class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-black dark:divide-gray-700">
                         <div  class="flex flex-col pb-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email address</dt>
                             <dd class="text-lg font-semibold">Hotelseraphim@gmail.com</dd>
