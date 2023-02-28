@@ -1,6 +1,6 @@
 <header 
 class="fixed top-0 left-0 right-0 z-10"
-style="background: rgba(226, 167, 6, 0.7);
+style="background: rgba(226, 167, 6, 0.8);
 box-shadow: 0 8px 32px 0 rgba(226, 167, 6, 0.7);
 backdrop-filter: blur( 5px );
 -webkit-backdrop-filter: blur( 5px );
