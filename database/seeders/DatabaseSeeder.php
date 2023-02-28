@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\Employee::factory(100)->create();
+        
+        
 
         $user1 = User::factory()->create([
             'name' => 'Admin',
@@ -90,7 +91,7 @@ class DatabaseSeeder extends Seeder
         $user2->assignRole($role2);
         $user3->assignRole($role3);
 
-        
+        \App\Models\Employee::factory(100)->create();
 
 
 

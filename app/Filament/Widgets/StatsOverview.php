@@ -13,8 +13,8 @@ class StatsOverview extends BaseWidget
     {
         
         $frontOffice = Department::where('name', 'Front Office')->withCount('employees')->first();
-        $houseKeeping = Department::where('name', 'House Keeping')->withCount('employees')->first();
-        $food = Department::where('name', 'Food & Beverages')->withCount('employees')->first();
+        $houseKeeping = Department::where('name', 'HouseKeeping')->withCount('employees')->first();
+        $food = Department::where('name', 'Food & Beverage Service')->withCount('employees')->first();
         $kitchen = Department::where('name', 'Kitchen')->withCount('employees')->first();
         $engineer = Department::where('name', 'Engineering/Maintenance')->withCount('employees')->first();
         $accounts = Department::where('name', 'Accounts')->withCount('employees')->first();
