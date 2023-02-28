@@ -28,7 +28,7 @@ class EmployeesRelationManager extends RelationManager
     public static function form(Form $form): Form
     {
         return $form
-        ->schema([
+         ->schema([
             Grid::make(1)
             ->schema([
                 Tabs::make('Heading')
@@ -39,9 +39,15 @@ class EmployeesRelationManager extends RelationManager
                         ->schema([
                             
                             // FileUpload::make('image')->image(),
+            // FileUpload::make('attachment')
+            // ->disk('s3')
+            // ->directory('form-attachments')
+            // ->visibility('private'),
+
             Select::make('department_id',)
                 ->relationship('department','name')->required(),
             TextInput::make('employee_id')->required()->maxLength(255),
+            DatePicker::make('date_hired')->required(),
             TextInput::make('first_name')->required()->maxLength(255),
             TextInput::make('middle_name')->required()->maxLength(255),
             TextInput::make('last_name')->required()->maxLength(255),
@@ -56,11 +62,14 @@ class EmployeesRelationManager extends RelationManager
             TextInput::make('nationality')->required()->maxLength(255),
             TextInput::make('address')->required()->maxLength(255),
             TextInput::make('zip_code')->required()->maxLength(5),
-            TextInput::make('tin_id')->required()->maxLength(255),
-            TextInput::make('sss_id')->required()->maxLength(255),
-            TextInput::make('philhealth_id')->required()->maxLength(255),
-            TextInput::make('pagibig_id')->required()->maxLength(255),
-            DatePicker::make('date_hired')->required(),
+            TextInput::make('tin_id')->required()->maxLength(255)->placeholder('000-000-000-000')
+            ->mask(fn (TextInput\Mask $mask) => $mask->pattern('000-000-000-000')),
+            TextInput::make('sss_id')->required()->maxLength(255)->placeholder('0000-0000000-0')
+            ->mask(fn (TextInput\Mask $mask) => $mask->pattern('0000-0000000-0')),
+            TextInput::make('philhealth_id')->required()->maxLength(255)->placeholder('0-00000000-0')
+            ->mask(fn (TextInput\Mask $mask) => $mask->pattern('0-00000000-0')),
+            TextInput::make('pagibig_id')->required()->maxLength(255)->placeholder('0000-0000-0000')
+            ->mask(fn (TextInput\Mask $mask) => $mask->pattern('0000-0000-000')),
                         ]) ]),
             Tabs\Tab::make('Family Information')
             ->schema([
@@ -163,44 +172,56 @@ class EmployeesRelationManager extends RelationManager
                         ->schema([
                             Grid::make(3)
                                 ->schema([
+                                    Fieldset::make('Highschool')
+                                        ->schema([
+                                            Grid::make(3)
+                                                ->schema([
                                     TextInput::make('HighSchool_Name')->maxLength(255),
                                     TextInput::make('HighSchool_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    Select::make('hsYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
-
-                                    TextInput::make('SeniorHighSchool_Name')->maxLength(255),
-                                    TextInput::make('SeniorHighSchool_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    TextInput::make('hs_Start')->maxLength(255)->label('Year Start'),
+                                    TextInput::make('hs_End')->maxLength(255)->label('Year End'),
+                                    TextInput::make('hsAwards')->maxLength(255)->label('Awards/Honor')
+                                    ])]),
+                                    Fieldset::make('Senior Highschool')
+                                        ->schema([
+                                            Grid::make(3)
+                                                ->schema([
+                                    TextInput::make('seniorHighSchool_Name')->maxLength(255),
+                                    TextInput::make('seniorHighSchool_Address')->maxLength(255),
+                                    Select::make('shsYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
-
+                                    TextInput::make('shs_Start')->maxLength(255)->label('Year Start'),
+                                    TextInput::make('shs_End')->maxLength(255)->label('Year End'),
+                                    TextInput::make('shsAwards')->maxLength(255)->label('Awards/Honor'),
+                                    ])]),
+                                    Fieldset::make('College')
+                                        ->schema([
+                                            Grid::make(3)
+                                                ->schema([
                                     TextInput::make('CollegeUniversity_Name')->maxLength(255),
                                     TextInput::make('CollegeUniversity_Address')->maxLength(255),
-                                    Select::make('Graduated?')
+                                    Select::make('collegeYear')->label('Graduated')
                                         ->options([
                                             'Yes' => 'Yes',
                                             'No' => 'No',
                                         ]),
-                                    TextInput::make('Year_Start')->maxLength(255),
-                                    TextInput::make('Year_End')->maxLength(255),
-                                    TextInput::make('Awards/Honor')->maxLength(255),
+                                    TextInput::make('college_Start')->maxLength(255)->label('Year Start'),
+                                    TextInput::make('college_End')->maxLength(255)->label('Year End'),
+                                    TextInput::make('collegeAwards')->maxLength(255)->label('Awards/Honor'),
+                                    ])]),
                                 ])
                         ]),
                 ]) 
                     ])
-            
-        ]);
+                    ]);
     }
 
     public static function table(Table $table): Table
